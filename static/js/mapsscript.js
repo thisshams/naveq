@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     var current = localStorage.getItem("current");  
     var destination = localStorage.getItem("destination"); 
+    window.localStorage.clear();
     
     
         document.getElementById(current).style.fill="#FC100D";

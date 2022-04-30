@@ -15,10 +15,10 @@ function colorChange()
         return false;
         
     }
-    else if(currentPosition==destinationPosition)
-    {
-        alert("Current and Destination position cannot be same.")
-    }
+    // else if(currentPosition==destinationPosition)
+    // {
+    //     alert("Current and Destination position cannot be same.")
+    // }
     else
     {
     localStorage.setItem("current", currentPosition);
@@ -54,3 +54,23 @@ function toFFM(){
 function toSFM(){
     window.location.href='secondFloorMap';
 }
+
+function selectFromMap(){
+    window.location.href="selectFromMap"
+    document.getElementById
+}
+document.addEventListener('DOMContentLoaded', () => {
+var current = localStorage.getItem("current");  
+var destination = localStorage.getItem("destination");
+console.log(current,destination);
+if (current){
+    var crnt=document.getElementById("current");
+    // crnt.innerHTML='<option value="'+current+'">current</option>';
+    crnt.value=current;
+    // console.log(crnt);
+}
+if (destination){
+    var dest=document.getElementById("destination");
+    dest.value=destination;
+}
+});
