@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
 
 
-    <script src="{{ url_for('static', filename='js/script.js') }}">
+    <script src="js/script.js">
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveq</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,8 +134,8 @@
             <option value="Room 136">136</option>
 
         </datalist>
-        <img src="/static/location.png" width="40px" height="40px"
-            onclick='window.location.href="selectFromMapCurrent"'>
+        <img src="/images/location.png" width="40px" height="40px"
+            onclick='window.location.href="templates/selectFromMapCurrent.html"'>
         <br><br>
 
         <div id="div2"> Destination Location</div>
@@ -233,127 +233,17 @@
             <option value="Room 136">136</option>
 
         </datalist>
-        <img src="/static/location.png" width="40px" height="40px"
-            onclick='window.location.href="selectFromMapDestination"'>
+        <img src="/images/location.png" width="40px" height="40px"
+            onclick='window.location.href="templates/selectFromMapDestination.html"'>
         <br><br><br>
         <button onclick="colorChange()">Submit</button>
         <br><br>
-        <!-- <p id="or">OR</p><br>
-        <a href="toMap">Choose from Map</a> -->
-    </div>
-
-    <div id="chat">
-
-        <div class="main">
-
-            <!---chatbox -->
-            <div class="chat_icon">
-
-
-            </div>
-            <div class="chat_box">
-                <div class="head">
-                    <h6>FOR ENQUIRY</h6>
-                </div>
-
-                <div class="middle">
-
-                    <div id="chatbox" class="border border-success">
-                        <p class="user_message message"><span>Hello,How can i help you?</span></p>
-                    </div>
-                </div>
-                <div id="userInput">
-
-
-                    <input id="textInput" type="text" name="msg" placeholder="Type message...">
-                    <image src="../static/send.svg" width="50px" height="50px" id="buttonInput" name="send"></image>
-                    <!-- <input id="buttonInput"  type="submit" name="send"> -->
-
-                </div>
-
-            </div>
-            <script>
-                function getResponse() {
-                    let userText = $("#textInput").val();
-                    var gfloor = ["Room G01", "Room G02", "Room G03", "Room G04", "Room G05", "WaterFilter", "Room G06", "Girls Washroom", "Room G07", "Room G08", "Room G09", "Room G10", "Room G11", "Room G12", "Room G13", "HOD ME", "Room G15", "Room G18", "Boys Washroom", "Room G19", "Room G20", "Room G21", "Room G22", "Room G23", "Room G24", "Second College", "Auditorium", "Fountain", "HOD CE", "Room G25", "Room G26", "Room G27", "Room G28", "Room G29", "Girls Washroom", "HOD IT", "Room G30", "Room G31", "Room G32", "Room G33", "Room G34", "Room G35", "WaterFilter", "Boys Washroom", "Room G36", "Room G37", "Room G38", "Room G39", "Room G40", "Room G41", "Room G42"];
-                    var ffloor = ["Room 101", "Room 102", "Room 103", "Room 105b", "Room 105", "Room 105a", "To Stairs1f", "Room 106", "Room 107", "Girls WashRoom1f", "Room 108", "Room 109", "Room 110", "Room 111", "Room 112", "Room 113", "To Stairs2f", "Room 117a", "Room 117", "Room 114", "Boys WashRoom1f", "Room 115", "Room 116", "Room 118", "Room 119", "Room 120", "To Ground Floor", "Room 121", "Room 122", "Room 123", "Room 124", "To Stairs3f", "Room 124a", "Room 125", "Room 126", "Room 127", "Girls WashRoom2f", "HOD CS", "Room 128", "Room 129", "Room 130", "Room 131", "Room 132", "Boys WashRoom2f", "Room 132", "Room 133b", "Room 133", "Room 133a", "To Stairs4f", "Room 134", "Room 135", "Room 136", "Stairs To Ground Floor"];
-                    const newStr = userText.split(' ')
-                        .map(w => w[0].toUpperCase() + w.substring(1).toLowerCase())
-                        .join(' ');
-                    if ((gfloor.includes(newStr))) {
-                        localStorage.setItem("current", newStr);
-                        localStorage.setItem("destination", newStr);
-                        let userHtml = '<p class="user_message"><span>' + newStr + '</span></p>';
-                        $("#textInput").val("");
-                        $("#chatbox").append(userHtml);
-                        document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-                        // bn = '<button >Open Map</button>';
-                        // bn.addEventListner("click", window.location.href = "firstFloorMap")
-                        var botHtml = '<p class="user_message message" style="font-style:italic">' + "Map Opened" + '</p>';
-                        $("#chatbox").append(botHtml);
-                        document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-                        window.location.href = 'groundFloorMap';
-                        // $("chatbox").append('<a href="groundFloorMap"></a>');
-                        // let userHtml = '<p class="user_message"><span>' + '<a href="groundFloorMap"></a>' + '</span></p>';
-                        // $("#textInput").val("");
-                        // $("#chatbox").append(userHtml);
-                        //document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-
-
-                    }
-                    else if ((ffloor.includes(newStr))) {
-                        localStorage.setItem("current", newStr);
-                        localStorage.setItem("destination", newStr);
-                        let userHtml = '<p class="user_message"><span>' + userText + '</span></p>';
-                        $("#textInput").val("");
-                        $("#chatbox").append(userHtml);
-                        document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-                        // bn = '<button >Open Map</button>';
-                        // bn.addEventListner("click", window.location.href = "firstFloorMap")
-                        var botHtml = '<p class="user_message message" style="font-style:italic">' + "Map Opened" + '</p>';
-                        $("#chatbox").append(botHtml);
-                        document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-                        window.location.href = "firstFloorMap"
-                    }
-                    else {
-                        let userHtml = '<p class="user_message"><span>' + userText + '</span></p>';
-                        $("#textInput").val("");
-                        $("#chatbox").append(userHtml);
-                        document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-                        $.get("/get", { msg: userText }).done(function (data) {
-                            var botHtml = '<p class="user_message message"><span>' + data + '</span></p>';
-                            $("#chatbox").append(botHtml);
-                            document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
-
-                        });
-                    }
-                }
-                $("#textInput").keypress(function (e) {
-                    //if enter key is pressed
-                    if (e.which == 13) {
-                        getResponse();
-                    }
-                });
-                $("#buttonInput").click(function () {
-                    getResponse();
-                });
-            </script>
-
-
-            <!---chatbox -->
-
-            <script src="{{ url_for('static', filename='js/toggle.js') }} ">
-
-            </script>
-            <script>
-                var objDiv = document.getElementById("chatbox");
-                objDiv.scrollTop = objDiv.scrollHeight;
-            </script>
-
-
-        </div>
 
     </div>
+    <iframe width="400" height="480" allow="microphone;" align="right" style="position:fixed;bottom:70px;right:150px"
+        src="https://console.dialogflow.com/api-client/demo/embedded/8ccb7cf4-d4bf-4cc3-b1ec-73909d7efae8"></iframe>
+
+
 </body>
 
 </html>

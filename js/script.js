@@ -29,31 +29,18 @@ function colorChange()
     var ffloor=["Room 101","Room 102","Room 103","Room 105b","Room 105","Room 105a","To Stairs1f","Room 106","Room 107","Girls WashRoom1f","Room 108","Room 109","Room 110","Room 111","Room 112","Room 113","To Stairs2f","Room 117a","Room 117","Room 114","Boys WashRoom1f","Room 115","Room 116","Room 118","Room 119","Room 120","To Ground Floor","Room 121","Room 122","Room 123","Room 124","To Stairs3f","Room 124a","Room 125","Room 126","Room 127","Girls WashRoom2f","HOD CS","Room 128","Room 129","Room 130","Room 131","Room 132","Boys WashRoom2f","Room 132","Room 133b","Room 133","Room 133a","To Stairs4f","Room 134","Room 135","Room 136","Stairs To Ground Floor"];
     if ((gfloor.includes(currentPosition)) && (gfloor.includes(destinationPosition))==true)
         {
-            window.location.href = 'groundFloorMap';
+            window.location.href = 'templates/groundFloorMap.html';
         }
     else if((ffloor.includes(currentPosition)) && (ffloor.includes(destinationPosition))==true){
-            window.location.href = 'firstFloorMap';
+            window.location.href = 'templates/firstFloorMap.html';
         }
     else{
-            window.location.href = 'bothMaps';
+            window.location.href = 'templates/bothMaps.html';
         }
     }
    
 }
-// for calling toMap to give input by touch
-function toMap(){
-    window.location.href = 'toMap'; 
-}
-//to call maps
-function toGFM(){
-    window.location.href='groundFloorTouchMap';
-}
-function toFFM(){
-    window.location.href='firstFloorTouchMap';
-}
-function toSFM(){
-    window.location.href='secondFloorMap';
-}
+
 
 function selectFromMap(){
     window.location.href="selectFromMap"
