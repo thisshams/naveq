@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="">
 
 
     <script src="js/script.js">
@@ -21,6 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveq</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +32,13 @@
 
 </head>
 
+       
 <body>
 
-    <header>NAVEQ<sub id="subscript"> for SRIT</sub></header>
+    <header >NAVEQ<sub id="subscript"> for SRIT</sub></header>
 
     <div id="map">
-        <h1>Navigation</h1>
+         <h1>Navigation</h1><br><br>
 
         <div id="div1"> Current Location</div>
         <input placeholder="Nearest Room Number" id="current" name="current" type="search" list="to" required>
@@ -133,7 +135,7 @@
             <option value="Room 136">136</option>
 
         </datalist>
-        <img src="images/location.png" width="40px" height="40px"
+        <img src="images/location.png" width="40px" height="40px" style="cursor: pointer;"
             onclick='window.location.href="templates/selectFromMapCurrent.html"'>
         <br><br>
 
@@ -232,16 +234,18 @@
             <option value="Room 136">136</option>
 
         </datalist>
-        <img src="images/location.png" width="40px" height="40px"
+        <img src="images/location.png" width="40px" height="40px" style="cursor: pointer;"
             onclick='window.location.href="templates/selectFromMapDestination.html"'>
-        <br><br>
+        <br><br><br>
         <button onclick="colorChange()">Submit</button>
         <br><br>
 
     </div>
-    <iframe width="400" height="480" allow="microphone;" align="right"
-        style="border-radius:10px;position:fixed;bottom:70px;right:150px"
+    
+    
+    <iframe id="chat_box" width="400" height="450" allow="microphone;" align="right" style="bottom:70px;right:150px;margin-right: 150px;margin-top: 30px;"
         src="https://console.dialogflow.com/api-client/demo/embedded/8ccb7cf4-d4bf-4cc3-b1ec-73909d7efae8"></iframe>
+
 
 
 </body>

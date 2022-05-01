@@ -52,6 +52,7 @@ body {
   width: 400px;
   height: 460px;
   border-radius: 25px;
+  float: left;
 }
 h1 {
 font-family: Rhodium Libre;
@@ -109,10 +110,11 @@ button:hover {
 #destination{
   border: 2px solid black;
 }
-@media only screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
 	#map{
 		position:static;
-		margin-left: 5%;
+		margin-left: 100px;
+    float: none;
 	  }
   }
 
@@ -169,4 +171,24 @@ justify-content: center;
 align-items: center;
 }
 
+iframe{
+  border-radius: 25px;
+}
 
+@media only screen and (max-width: 1200px) {
+   #chat_box{
+    position:static;
+    margin-top: 20px;
+    margin-left:200px;
+    margin-right: 0px;
+    }
+  }
+  
+   @media only screen and (max-width: 750px) {
+   #chat_box{
+    position:static;
+    margin-top: 5%;
+    margin-left:100px;
+    float:none;
+  }
+}
