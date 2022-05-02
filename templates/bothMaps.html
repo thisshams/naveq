@@ -673,7 +673,6 @@
     <article>
         <section id="g" onclick="gf()">Ground Floor</section>
         <section id="f" onclick="ff()">First Floor</section>
-        <section id="s" onclick="sf()">Second Floor</section>
     </article>
     <style>
         article {
@@ -718,42 +717,27 @@
     <script>
         var gmap = document.getElementById("gmap");
         var fmap = document.getElementById("fmap");
-        var smap = document.getElementById("smap");
         var g = document.getElementById("g");
         var f = document.getElementById("f");
-        var s = document.getElementById("s");
 
         g.style.background = "red";
         gmap.style.display = "block";
         fmap.style.display = "none";
-        smap.style.display = "none";
 
         function gf() {
             g.style.background = "red";
             f.style.background = "rgb(154, 163, 172)";
-            s.style.background = "rgb(154, 163, 172)";
             gmap.style.display = "block";
             fmap.style.display = "none";
-            smap.style.display = "none";
         }
         function ff() {
             g.style.background = "rgb(154, 163, 172)";
             f.style.background = "red";
-            s.style.background = "rgb(154, 163, 172)";
             f.style.background = "red";
             fmap.style.display = "block";
-            smap.style.display = "none";
             gmap.style.display = "none";
         }
-        function sf() {
-            g.style.background = "rgb(154, 163, 172)";
-            f.style.background = "rgb(154, 163, 172)";
-            s.style.background = "red";
-            s.style.background = "red";
-            smap.style.display = "block";
-            fmap.style.display = "none";
-            gmap.style.display = "none";
-        }
+
     </script>
 
 
