@@ -36,12 +36,11 @@ body {
 }
 h1 {
   padding: 15px;
-font-family: Rhodium Libre;
-font-style: normal;
-font-weight: normal;
-font-size: 48px;
-text-decoration-line: underline;
-color: #ffffff;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  text-decoration-line: underline;
 }
 p {
   text-align: center;
@@ -52,26 +51,33 @@ button {
   font-family: "Oswald", sans-serif;
   width: 100px;
   height: 30px;
-  border:2px solid black;
+  border:none;
+  border-radius: 50px;
   background-color: #455dc7;
   color:white;
 }
  #div1 {
+  padding-left:3px;
+  padding-right:3px;
   color: #fc100d;
   font-family: Red Hat Text;
 font-style: normal;
 font-weight:bolder;
 font-size: 24px;
 background-color: #ffffff;
+border-radius: 3px;
 width:60%;
 }
 #div2 {
+  padding-left:3px;
+  padding-right:3px;
   font-family: Red Hat Text;
 font-style: normal;
 font-weight:bolder;
 font-size: 24px;
   color: #4bb543;
   background-color: #ffffff;
+  border-radius: 3px;
 width:60%;
 } 
 button:hover {

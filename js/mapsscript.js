@@ -243,5 +243,23 @@ document.addEventListener('DOMContentLoaded', () => {
         //   document.getElementById(cpath+"_2").style.fill="#1668f5";
         // }
     }
+    var i=0;
+    setInterval(function(){
+    //   for(var i=0;i<path1.path.length;i++)
+    // {
+    //     var cpath=path1.path[i];
+        // console.log(cpath);
+        if (i==0){
+          document.getElementById(path1.path[path1.path.length-1]).style.fill="#1668f5"
+        }
+        document.getElementById(path1.path[i]).style.fill="yellow";
+        if (i>0)
+          document.getElementById(path1.path[i-1]).style.fill="#1668f5"
+        i+=1
+        if (i>=path1.path.length){
+          i=0
+        }
+    // }
+    },300)
 
 });

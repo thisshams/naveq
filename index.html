@@ -58,36 +58,12 @@
 
     }
 
-    /* .container {
-        border: 2px solid black;
-
-    } */
 
     @media (max-width: 991px) {
         .column-margin {
             margin: 20px 0;
         }
     }
-
-    /* main {
-        background-image: url("indexbg.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    } */
-
-    /* footer {
-        position: fixed;
-        bottom: 0;
-    } */
-    /* html,
-    body {
-        /* height: 100%; 
-        background-image: url("indexbg.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    } */
 </style>
 
 <body class="d-flex flex-column min-vh-100">
@@ -104,7 +80,7 @@
             <div class="row justify-content-around align-items-center " id="r1">
                 <div class="col-lg-3 col-md-7 col-sm-10 column-margin" id="nav">
                     <div id="map">
-                        <h1>Navigation</h1>
+                        <h1 style="color:white">Navigation</h1>
                         <br>
                         <span id="div1"> Current Location</span><br><br>
                         <input placeholder="Nearest Room Number" id="current" name="current" type="search" list="to"
@@ -304,7 +280,7 @@
                         <img src="images/location.png" width="40px" height="40px"
                             onclick='window.location.href="templates/selectFromMapDestination.html"'>
                         <br><br><br>
-                        <button onclick="colorChange()">Submit</button>
+                        <button style="border-radius: 5px;" onclick="colorChange()">Submit</button>
                         <br><br>
 
                     </div>

@@ -34,9 +34,12 @@ function colorChange()
     else if((ffloor.includes(currentPosition)) && (ffloor.includes(destinationPosition))==true){
             window.location.href = 'templates/firstFloorMap.html';
         }
-    else{
-            window.location.href = 'templates/bothMaps.html';
+    else if((gfloor.includes(currentPosition)) && (ffloor.includes(destinationPosition))==true){
+            window.location.href = 'templates/bothMapsG.html';
         }
+    else{
+            window.location.href = 'templates/bothMapsF.html';
+    }
     }
    
 }
