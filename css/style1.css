@@ -144,6 +144,7 @@
 	padding-left:10px;
 	font-size:20px;
 }
+
  input[type="submit"]
 {
 	width:80px;
@@ -157,18 +158,5 @@
 	margin-right: 100px;
 
 }
-@media only screen and (max-width: 1200px) {
-	.chat_box{
-		position:static;
-		margin-top: 20px;
-		margin-left:200px;
-		margin-right: 0px;
-	  }
-  }
-  @media only screen and (max-width: 750px) {
-	.chat_box{
-		position:static;
-		margin-top: 5%;
-		margin-left: 5%;
-	  }
-  }
+
+	
